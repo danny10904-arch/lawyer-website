@@ -24,58 +24,31 @@ const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwhgZUw-scn2f
 const EXPERTISE = [
   {
     title: "家事與遺產繼承",
-    description: "協助處理遺產清冊陳報、繼承權益維護及家事紛爭調解。",
+    description: "協助處理遺產清冊陳報、繼承權益維護、遺囑撰擬及家事紛爭調解。",
     icon: <Users className="w-6 h-6" />,
     cases: "112年度司繼字第1967號"
   },
   {
     title: "民事訴訟與契約",
-    description: "專業處理承攬報酬請求、契約履行爭議及各類民事損害賠償。",
+    description: "專業處理承攬報酬請求、契約履行爭議、各類民事損害賠償及侵權行為訴訟。",
     icon: <Scale className="w-6 h-6" />,
-    cases: "112年度訴字第1654號"
+    cases: "112年度補字第886號"
   },
   {
     title: "勞資爭議處理",
-    description: "保障勞工權益，處理資遣費請求、確認僱傭關係及勞動契約爭議。",
+    description: "保障勞工權益，處理資遣費請求、確認僱傭關係存在及勞動契約爭議。",
     icon: <Briefcase className="w-6 h-6" />,
-    cases: "111年度勞補字第713號"
+    cases: "110年度勞訴字第248號"
   },
   {
     title: "金融與刑事附帶民事",
-    description: "針對洗錢防制、詐欺等金融犯罪之受害者提供損害賠償訴訟服務。",
+    description: "針對洗錢防制、詐欺等金融犯罪之受害者，提供專業之刑事辯護與附帶民事損害賠償訴訟。",
     icon: <ShieldCheck className="w-6 h-6" />,
     cases: "113年度附民字第2682號"
   }
 ];
 
 const JUDGMENTS = [
-  {
-    id: "TPDV-112-1967",
-    court: "臺灣臺北地方法院",
-    year: "112年度",
-    type: "司繼字第1967號",
-    subject: "陳報遺產清冊",
-    date: "2023-07-21",
-    link: "https://lawplayer.com/kyc/judgment/TPDV,112,%E5%8F%B8%E7%B9%BC,1967,20230721,1_6e45a00a8c8959d8f37e2be55dfe0d50d1bd3435"
-  },
-  {
-    id: "PCDV-112-1654",
-    court: "臺灣新北地方法院",
-    year: "112年度",
-    type: "訴字第1654號",
-    subject: "給付承攬報酬",
-    date: "2023-07-21",
-    link: "https://lawplayer.com/kyc/judgment/PCDV,112,%E8%A8%B4,1654,20230721,1_4a795a39db3c4d3d4d68397a6998e871ed04c412"
-  },
-  {
-    id: "TCDV-111-713",
-    court: "臺灣臺中地方法院",
-    year: "111年度",
-    type: "勞補字第713號",
-    subject: "給付資遣費等",
-    date: "2022-11-23",
-    link: "https://lawplayer.com/kyc/judgment/TCDV,111,%E5%8B%9E%E8%A3%9C,713,20221123,1_8619704f212257775841065ab100579fb03e36f1"
-  },
   {
     id: "TCDM-113-2682",
     court: "臺灣臺中地方法院",
@@ -84,6 +57,51 @@ const JUDGMENTS = [
     subject: "請求損害賠償 (洗錢防制法相關)",
     date: "2024-11-20",
     link: "https://lawplayer.com/kyc/judgment/TCDM,113,%E9%99%84%E6%B0%91,2682,20241120,1_c6115743bf54a867d0438748bd8d0fef8f8c4f14"
+  },
+  {
+    id: "TPDV-112-1967",
+    court: "臺灣臺北地方法院",
+    year: "112年度",
+    type: "司繼字第1967號",
+    subject: "陳報遺產清冊 (家事繼承)",
+    date: "2023-07-21",
+    link: "https://lawplayer.com/kyc/judgment/TPDV,112,%E5%8F%B8%E7%B9%BC,1967,20230721,1_6e45a00a8c8959d8f37e2be55dfe0d50d1bd3435"
+  },
+  {
+    id: "PCDV-112-1654",
+    court: "臺灣新北地方法院",
+    year: "112年度",
+    type: "訴字第1654號",
+    subject: "給付承攬報酬 (民事訴訟)",
+    date: "2023-07-21",
+    link: "https://lawplayer.com/kyc/judgment/PCDV,112,%E8%A8%B4,1654,20230721,1_4a795a39db3c4d3d4d68397a6998e871ed04c412"
+  },
+  {
+    id: "PCDV-112-886",
+    court: "臺灣新北地方法院",
+    year: "112年度",
+    type: "補字第886號",
+    subject: "損害賠償 (民事訴訟)",
+    date: "2023-05-30",
+    link: "https://lawplayer.com/kyc/judgment/PCDV,112,%E8%A3%9C,886,20230530,1_f8cfc60c21b2bce4c8ac8a624b093b80eb4840a8"
+  },
+  {
+    id: "TCDV-111-713",
+    court: "臺灣臺中地方法院",
+    year: "111年度",
+    type: "勞補字第713號",
+    subject: "給付資遣費等 (勞資爭議)",
+    date: "2022-11-23",
+    link: "https://lawplayer.com/kyc/judgment/TCDV,111,%E5%8B%9E%E8%A3%9C,713,20221123,1_8619704f212257775841065ab100579fb03e36f1"
+  },
+  {
+    id: "TPDV-110-248",
+    court: "臺灣臺北地方法院",
+    year: "110年度",
+    type: "勞訴字第248號",
+    subject: "確認僱傭關係存在等 (勞資爭議)",
+    date: "2022-05-06",
+    link: "https://lawplayer.com/kyc/judgment/TPDV,110,%E5%8B%9E%E8%A3%9C,248,20220506,1_8fad1ac4080a2550ec1e467d2024f988cf90a553"
   }
 ];
 
@@ -181,7 +199,7 @@ export default function App() {
               <span className="italic font-normal text-legal-gold">您的權益</span>
             </h1>
             <p className="text-base md:text-lg text-white/70 max-w-md mx-auto md:mx-0 mb-8 leading-relaxed">
-              深耕民事、家事及勞資爭議領域。我們不只提供法律建議，更致力於為每一位當事人尋求最溫暖且專業的解決方案。
+              深耕民事、家事及勞資爭議領域，具備臺北、新北及臺中地方法院豐富實務經驗。我們不只提供法律建議，更致力於為每一位當事人尋求最專業且溫暖的解決方案。
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-6 md:gap-4">
               <a href="#expertise" className="w-full sm:w-auto bg-legal-gold text-white px-8 py-4 rounded-full font-medium flex items-center justify-center gap-2 hover:scale-105 transition-transform">
