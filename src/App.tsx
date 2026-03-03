@@ -411,7 +411,7 @@ export default function App() {
               <span className="italic font-normal text-legal-gold">您的權益</span>
             </h1>
             <p className="text-base md:text-lg text-white/70 max-w-md mx-auto md:mx-0 mb-8 leading-relaxed">
-              深耕民事、家事及勞資爭議領域，具備臺北、新北及臺中地方法院豐富實務經驗。我們不只提供法律建議，更致力於為每一位當事人尋求最專業且溫暖的解決方案。
+              橫跨民事、家事與勞資領域，於多地方法院累積豐富勝訴經驗；以嚴謹法律思維與人本關懷，為當事人打造穩健而有力的解決方案。
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-6 md:gap-4">
               <a href="#expertise" className="w-full sm:w-auto bg-legal-gold text-white px-8 py-4 rounded-full font-medium flex items-center justify-center gap-2 hover:scale-105 transition-transform">
@@ -463,8 +463,8 @@ export default function App() {
                   <Award className="text-legal-gold w-5 h-5 md:w-6 md:h-6" />
                 </div>
                 <div>
-                  <p className="text-legal-navy font-bold text-sm md:text-base">專業認證律師</p>
-                  <p className="text-legal-navy/60 text-[10px] md:text-xs">專注民事與家事訴訟</p>
+                  <p className="text-legal-navy font-bold text-sm md:text-base">專業法律顧問</p>
+                  <p className="text-legal-navy/60 text-[10px] md:text-xs">多地法院實務勝訴經驗</p>
                 </div>
               </div>
             </motion.div>
@@ -517,7 +517,7 @@ export default function App() {
             </p>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+          <div className="flex flex-wrap justify-center gap-6 md:gap-8">
             {EXPERTISE.map((item, index) => (
               <motion.div
                 key={index}
@@ -525,14 +525,14 @@ export default function App() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="bg-white p-6 md:p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-500 group border border-transparent hover:border-legal-gold/20"
+                className="bg-white p-6 md:p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-500 group border border-transparent hover:border-legal-gold/20 w-full sm:w-[calc(50%-1.5rem)] lg:w-[calc(33.333%-2rem)] max-w-sm flex flex-col"
               >
                 <div className="w-12 h-12 md:w-14 md:h-14 bg-legal-sand rounded-xl flex items-center justify-center mb-6 group-hover:bg-legal-gold group-hover:text-white transition-colors duration-500">
                   {item.icon}
                 </div>
                 <h3 className="text-lg md:text-xl font-bold mb-4">{item.title}</h3>
-                <p className="text-legal-navy/60 text-xs md:text-sm leading-relaxed mb-6">{item.description}</p>
-                <div className="pt-4 md:pt-6 border-t border-legal-sand flex items-center justify-between">
+                <p className="text-legal-navy/60 text-xs md:text-sm leading-relaxed mb-6 flex-grow">{item.description}</p>
+                <div className="pt-4 md:pt-6 border-t border-legal-sand flex items-center justify-between mt-auto">
                   <span className="text-[9px] md:text-[10px] font-mono uppercase tracking-tighter text-legal-navy/40">代表案號</span>
                   <span className="text-[10px] md:text-xs font-medium text-legal-gold">{item.cases}</span>
                 </div>
@@ -550,7 +550,7 @@ export default function App() {
             <div className="w-16 md:w-24 h-1 bg-legal-gold mx-auto mb-8" />
             
             {/* Category Filter */}
-            <div className="flex flex-wrap justify-center gap-2 md:gap-4 max-w-4xl mx-auto">
+            <div className="flex flex-wrap justify-center gap-2 md:gap-4 max-w-4xl mx-auto lg:px-20">
               {categories.map((cat) => (
                 <button
                   key={cat}
@@ -558,7 +558,7 @@ export default function App() {
                     setActiveCategory(cat);
                     setVisibleCount(6);
                   }}
-                  className={`px-4 md:px-6 py-2 rounded-full text-xs md:text-sm font-medium transition-all duration-300 border ${
+                  className={`px-4 md:px-6 py-2 rounded-full text-xs md:text-sm font-medium transition-all duration-300 border whitespace-nowrap ${
                     activeCategory === cat 
                     ? "bg-legal-navy text-white border-legal-navy shadow-lg" 
                     : "bg-white text-legal-navy border-legal-sand hover:border-legal-gold"
