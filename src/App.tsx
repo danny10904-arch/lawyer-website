@@ -411,7 +411,7 @@ export default function App() {
               <span className="italic font-normal text-legal-gold">您的權益</span>
             </h1>
             <p className="text-base md:text-lg text-white/70 max-w-md mx-auto md:mx-0 mb-8 leading-relaxed">
-              橫跨民事、家事與勞資領域，於多地方法院累積豐富勝訴經驗；以嚴謹法律思維與人本關懷，為當事人打造穩健而有力的解決方案。
+              橫跨民事、家事與勞資領域，於多地方法院累積豐富勝訴經驗；以嚴謹法律思維與人本關懷，為當事人打造穩健而有力的解決方案
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-6 md:gap-4">
               <a href="#expertise" className="w-full sm:w-auto bg-legal-gold text-white px-8 py-4 rounded-full font-medium flex items-center justify-center gap-2 hover:scale-105 transition-transform">
