@@ -41,31 +41,159 @@ const EXPERTISE = [
     cases: "110年度勞訴字第248號"
   },
   {
-    title: "金融與刑事附帶民事",
-    description: "針對洗錢防制、詐欺等金融犯罪之受害者，提供專業之刑事辯護與附帶民事損害賠償訴訟。",
+    title: "金融與刑事辯護",
+    description: "針對洗錢防制、詐欺等金融犯罪提供專業辯護，及刑事附帶民事損害賠償訴訟。",
     icon: <ShieldCheck className="w-6 h-6" />,
-    cases: "113年度附民字第2682號"
+    cases: "113年度金訴字第2108號"
+  },
+  {
+    title: "智慧財產與行政訴訟",
+    description: "處理公平交易法、智慧財產權爭議及行政處分之救濟與訴訟。",
+    icon: <Gavel className="w-6 h-6" />,
+    cases: "110年度民公訴字第10號"
   }
 ];
 
 const JUDGMENTS = [
   {
+    id: "PCDM-114-1078",
+    court: "臺灣新北地方法院",
+    year: "114年度",
+    type: "審交易字第1078號",
+    subject: "過失傷害 (交通刑事)",
+    date: "2025-11-24",
+    category: "刑事訴訟",
+    link: "https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=PCDM%2c114%2c%e5%af%a9%e4%ba%a4%e6%98%93%2c1078%2c20251124%2c1&ot=in"
+  },
+  {
+    id: "PCDV-114-136",
+    court: "臺灣新北地方法院",
+    year: "114年度",
+    type: "審補字第136號",
+    subject: "損害賠償 (民事訴訟)",
+    date: "2025-11-10",
+    category: "民事訴訟",
+    link: "https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=PCDV%2c114%2c%e5%af%a9%e8%a3%9c%2c136%2c20251110%2c1&ot=in"
+  },
+  {
+    id: "PCDV-114-1340",
+    court: "臺灣新北地方法院",
+    year: "114年度",
+    type: "訴字第1340號",
+    subject: "給付承攬報酬",
+    date: "2025-06-25",
+    category: "民事訴訟",
+    link: "https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=PCDV%2c114%2c%e8%a8%b4%2c1340%2c20250625%2c1&ot=in"
+  },
+  {
+    id: "TPHM-114-1446",
+    court: "臺灣高等法院",
+    year: "114年度",
+    type: "上訴字第1446號",
+    subject: "毒品危害防制條例 (刑事二審)",
+    date: "2025-05-21",
+    category: "刑事訴訟",
+    link: "https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TPHM%2c114%2c%e4%b8%8a%e8%a8%b4%2c1446%2c20250521%2c1&ot=in"
+  },
+  {
+    id: "TCDV-114-5",
+    court: "臺灣臺中地方法院",
+    year: "114年度",
+    type: "金字第5號",
+    subject: "損害賠償 (金融爭議)",
+    date: "2025-02-21",
+    category: "金融犯罪/賠償",
+    link: "https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TCDV%2c114%2c%e9%87%91%2c5%2c20250221%2c1&ot=in"
+  },
+  {
+    id: "TPEV-114-3399",
+    court: "臺灣臺北地方法院",
+    year: "114年度",
+    type: "北簡字第3399號",
+    subject: "給付簽帳卡消費款",
+    date: "2025-08-01",
+    category: "民事訴訟",
+    link: "https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TPEV%2c114%2c%e5%8c%97%e7%b0%a1%2c3399%2c20250801%2c2&ot=in"
+  },
+  {
+    id: "TPEV-114-3399-2",
+    court: "臺灣臺北地方法院",
+    year: "114年度",
+    type: "北簡字第3399號",
+    subject: "給付簽帳卡消費款 (程序)",
+    date: "2025-07-10",
+    category: "民事訴訟",
+    link: "https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TPEV%2c114%2c%e5%8c%97%e7%b0%a1%2c3399%2c20250710%2c1&ot=in"
+  },
+  {
+    id: "TPEV-114-853",
+    court: "臺灣臺北地方法院",
+    year: "114年度",
+    type: "北補字第853號",
+    subject: "損害賠償 (民事補正)",
+    date: "2025-03-31",
+    category: "民事訴訟",
+    link: "https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TPEV%2c114%2c%e5%8c%97%e8%a3%9c%2c853%2c20250331%2c1&ot=in"
+  },
+  {
+    id: "PCEV-112-2602",
+    court: "臺灣新北地方法院",
+    year: "112年度",
+    type: "板簡字第2602號",
+    subject: "返還不當得利 (二審)",
+    date: "2024-01-03",
+    category: "民事訴訟",
+    link: "https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=PCEV%2c112%2c%e6%9d%bf%e7%b0%a1%2c2602%2c20240103%2c2&ot=in"
+  },
+  {
+    id: "PCEV-112-2602-1",
+    court: "臺灣新北地方法院",
+    year: "112年度",
+    type: "板簡字第2602號",
+    subject: "返還不當得利 (一審)",
+    date: "2023-10-25",
+    category: "民事訴訟",
+    link: "https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=PCEV%2c112%2c%e6%9d%bf%e7%b0%a1%2c2602%2c20231025%2c1&ot=in"
+  },
+  {
+    id: "PCDM-113-2663",
+    court: "臺灣新北地方法院",
+    year: "113年度",
+    type: "審附民字第2663號",
+    subject: "刑事附帶民事訴訟 (損害賠償)",
+    date: "2025-01-10",
+    category: "刑事訴訟",
+    link: "https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=PCDM%2c113%2c%e5%af%a9%e9%99%84%e6%b0%91%2c2663%2c20250110%2c1&ot=in"
+  },
+  {
+    id: "PCDM-113-2108",
+    court: "臺灣新北地方法院",
+    year: "113年度",
+    type: "金訴字第2108號",
+    subject: "洗錢防制法 (刑事金融)",
+    date: "2024-12-31",
+    category: "金融犯罪/賠償",
+    link: "https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=PCDM%2c113%2c%e9%87%91%e8%a8%b4%2c2108%2c20241231%2c1&ot=in"
+  },
+  {
     id: "TCDM-113-2682",
     court: "臺灣臺中地方法院",
     year: "113年度",
     type: "附民字第2682號",
-    subject: "請求損害賠償 (洗錢防制法相關)",
+    subject: "損害賠償 (刑事附帶民事)",
     date: "2024-11-20",
-    link: "https://lawplayer.com/kyc/judgment/TCDM,113,%E9%99%84%E6%B0%91,2682,20241120,1_c6115743bf54a867d0438748bd8d0fef8f8c4f14"
+    category: "刑事訴訟",
+    link: "https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TCDM%2c113%2c%e9%99%84%e6%b0%91%2c2682%2c20241120%2c1&ot=in"
   },
   {
-    id: "TPDV-112-1967",
-    court: "臺灣臺北地方法院",
+    id: "SLDV-112-1479",
+    court: "臺灣士林地方法院",
     year: "112年度",
-    type: "司繼字第1967號",
-    subject: "陳報遺產清冊 (家事繼承)",
-    date: "2023-07-21",
-    link: "https://lawplayer.com/kyc/judgment/TPDV,112,%E5%8F%B8%E7%B9%BC,1967,20230721,1_6e45a00a8c8959d8f37e2be55dfe0d50d1bd3435"
+    type: "訴字第1479號",
+    subject: "確認抵押權不存在等",
+    date: "2024-10-04",
+    category: "民事訴訟",
+    link: "https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=SLDV%2c112%2c%e8%a8%b4%2c1479%2c20241004%2c1&ot=in"
   },
   {
     id: "PCDV-112-1654",
@@ -74,7 +202,18 @@ const JUDGMENTS = [
     type: "訴字第1654號",
     subject: "給付承攬報酬 (民事訴訟)",
     date: "2023-07-21",
-    link: "https://lawplayer.com/kyc/judgment/PCDV,112,%E8%A8%B4,1654,20230721,1_4a795a39db3c4d3d4d68397a6998e871ed04c412"
+    category: "民事訴訟",
+    link: "https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=PCDV%2c112%2c%e8%a8%b4%2c1654%2c20230721%2c1&ot=in"
+  },
+  {
+    id: "TPDV-112-1967",
+    court: "臺灣臺北地方法院",
+    year: "112年度",
+    type: "司繼字第1967號",
+    subject: "陳報遺產清冊 (家事繼承)",
+    date: "2023-07-21",
+    category: "家事與遺產繼承",
+    link: "https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TPDV%2c112%2c%e5%8f%b8%e7%b9%bc%2c1967%2c20230721%2c1&ot=in"
   },
   {
     id: "PCDV-112-886",
@@ -83,7 +222,8 @@ const JUDGMENTS = [
     type: "補字第886號",
     subject: "損害賠償 (民事訴訟)",
     date: "2023-05-30",
-    link: "https://lawplayer.com/kyc/judgment/PCDV,112,%E8%A3%9C,886,20230530,1_f8cfc60c21b2bce4c8ac8a624b093b80eb4840a8"
+    category: "民事訴訟",
+    link: "https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=PCDV%2c112%2c%e8%a3%9c%2c886%2c20230530%2c1&ot=in"
   },
   {
     id: "TCDV-111-713",
@@ -92,7 +232,18 @@ const JUDGMENTS = [
     type: "勞補字第713號",
     subject: "給付資遣費等 (勞資爭議)",
     date: "2022-11-23",
-    link: "https://lawplayer.com/kyc/judgment/TCDV,111,%E5%8B%9E%E8%A3%9C,713,20221123,1_8619704f212257775841065ab100579fb03e36f1"
+    category: "勞資爭議",
+    link: "https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TCDV%2c111%2c%e5%8b%9e%e8%a3%9c%2c713%2c20221123%2c1&ot=in"
+  },
+  {
+    id: "PCDV-111-1976",
+    court: "臺灣新北地方法院",
+    year: "111年度",
+    type: "訴字第1976號",
+    subject: "返還借款 (民事訴訟)",
+    date: "2022-09-29",
+    category: "民事訴訟",
+    link: "https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=PCDV%2c111%2c%e8%a8%b4%2c1976%2c20220929%2c1&ot=in"
   },
   {
     id: "TPDV-110-248",
@@ -101,9 +252,62 @@ const JUDGMENTS = [
     type: "勞訴字第248號",
     subject: "確認僱傭關係存在等 (勞資爭議)",
     date: "2022-05-06",
-    link: "https://lawplayer.com/kyc/judgment/TPDV,110,%E5%8B%9E%E8%A3%9C,248,20220506,1_8fad1ac4080a2550ec1e467d2024f988cf90a553"
+    category: "勞資爭議",
+    link: "https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TPDV%2c110%2c%e5%8b%9e%e8%a8%b4%2c248%2c20220506%2c1&ot=in"
+  },
+  {
+    id: "IPCV-110-10",
+    court: "智慧財產及商業法院",
+    year: "110年度",
+    type: "民公訴字第10號",
+    subject: "公平交易法 (智慧財產)",
+    date: "2021-11-30",
+    category: "智慧財產權",
+    link: "https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=IPCV%2c110%2c%e6%b0%91%e5%85%ac%e8%a8%b4%2c10%2c20211130%2c1&ot=in"
+  },
+  {
+    id: "PCDV-109-529",
+    court: "臺灣新北地方法院",
+    year: "109年度",
+    type: "婚字第529號",
+    subject: "離婚 (家事婚姻)",
+    date: "2021-09-15",
+    category: "家事與遺產繼承",
+    link: "https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=PCDV%20109%20%e5%a9%9a%20529%2020210915%201"
+  },
+  {
+    id: "TPDV-110-25",
+    court: "臺灣臺北地方法院",
+    year: "110年度",
+    type: "勞補字第25號",
+    subject: "給付薪資等 (勞資爭議)",
+    date: "2021-02-17",
+    category: "勞資爭議",
+    link: "https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TPDV%2c110%2c%e5%8b%9e%e8%a3%9c%2c25%2c20210217%2c1&ot=in"
+  },
+  {
+    id: "TPHV-109-5",
+    court: "臺灣高等法院",
+    year: "109年度",
+    type: "重勞上更一字第5號",
+    subject: "確認僱傭關係存在 (勞資二審)",
+    date: "2020-12-29",
+    category: "勞資爭議",
+    link: "https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TPHV%2c109%2c%e9%87%8d%e5%8b%9e%e4%b8%8a%e6%9b%b4%e4%b8%80%2c5%2c20201229%2c1&ot=in"
+  },
+  {
+    id: "TPBA-109-2",
+    court: "臺北高等行政法院",
+    year: "109年度",
+    type: "收抗字第2號",
+    subject: "收容聲請 (行政訴訟)",
+    date: "2020-04-17",
+    category: "行政訴訟",
+    link: "https://judgment.judicial.gov.tw/FJUD/data.aspx?ty=JD&id=TPBA%2c109%2c%e6%94%b6%e6%8a%97%2c2%2c20200417%2c1&ot=in"
   }
 ];
+
+
 
 export default function App() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -115,6 +319,14 @@ export default function App() {
     category: "家事與遺產繼承",
     message: ""
   });
+  const [activeCategory, setActiveCategory] = useState("全部");
+  const [visibleCount, setVisibleCount] = useState(6);
+
+  const categories = ["全部", "民事訴訟", "刑事訴訟", "勞資爭議", "家事與遺產繼承", "金融犯罪/賠償", "智慧財產權", "行政訴訟"];
+
+  const filteredJudgments = activeCategory === "全部" 
+    ? JUDGMENTS 
+    : JUDGMENTS.filter(j => j.category === activeCategory);
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
@@ -334,45 +546,77 @@ export default function App() {
       <section id="cases" className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-6">
           <div className="text-center mb-12 md:mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold mb-4">經手案例</h2>
-            <div className="w-16 md:w-24 h-1 bg-legal-gold mx-auto" />
+            <h2 className="text-3xl md:text-5xl font-bold mb-4">實務經歷</h2>
+            <div className="w-16 md:w-24 h-1 bg-legal-gold mx-auto mb-8" />
+            
+            {/* Category Filter */}
+            <div className="flex flex-wrap justify-center gap-2 md:gap-4 max-w-4xl mx-auto">
+              {categories.map((cat) => (
+                <button
+                  key={cat}
+                  onClick={() => {
+                    setActiveCategory(cat);
+                    setVisibleCount(6);
+                  }}
+                  className={`px-4 md:px-6 py-2 rounded-full text-xs md:text-sm font-medium transition-all duration-300 border ${
+                    activeCategory === cat 
+                    ? "bg-legal-navy text-white border-legal-navy shadow-lg" 
+                    : "bg-white text-legal-navy border-legal-sand hover:border-legal-gold"
+                  }`}
+                >
+                  {cat}
+                </button>
+              ))}
+            </div>
           </div>
 
-          <div className="space-y-4 md:space-y-6 max-w-5xl mx-auto">
-            {JUDGMENTS.map((item, index) => (
+          <div className="grid md:grid-cols-2 gap-4 md:gap-6 max-w-6xl mx-auto">
+            {filteredJudgments.slice(0, visibleCount).map((item, index) => (
               <motion.a
                 href={item.link}
                 target="_blank"
                 rel="noreferrer"
-                key={index}
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                key={item.id}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="group flex flex-col sm:flex-row items-start sm:items-center gap-4 md:gap-8 p-6 md:p-8 rounded-2xl border border-legal-sand hover:bg-legal-sand transition-all duration-300"
+                transition={{ delay: (index % 2) * 0.1 }}
+                className="group flex items-center gap-4 md:gap-6 p-4 md:p-6 rounded-2xl border border-legal-sand hover:bg-legal-sand transition-all duration-300"
               >
-                <div className="flex-shrink-0 w-14 h-14 md:w-20 md:h-20 bg-legal-navy text-white rounded-full flex flex-col items-center justify-center text-center">
-                  <span className="text-[8px] md:text-[10px] uppercase opacity-60">Year</span>
-                  <span className="text-sm md:text-lg font-serif">{item.year.replace('年度', '')}</span>
+                <div className="flex-shrink-0 w-12 h-12 md:w-16 md:h-16 bg-legal-navy text-white rounded-xl flex flex-col items-center justify-center text-center">
+                  <span className="text-[7px] md:text-[8px] uppercase opacity-60">Year</span>
+                  <span className="text-xs md:text-base font-serif">{item.year.replace('年度', '')}</span>
                 </div>
-                <div className="flex-grow">
-                  <div className="flex flex-wrap items-center gap-2 md:gap-3 mb-2">
-                    <span className="px-2 md:px-3 py-0.5 md:py-1 bg-legal-gold/10 text-legal-gold text-[9px] md:text-[10px] font-bold rounded-full uppercase tracking-wider">
+                <div className="flex-grow min-w-0">
+                  <div className="flex items-center gap-2 mb-1">
+                    <span className="px-2 py-0.5 bg-legal-gold/10 text-legal-gold text-[8px] md:text-[10px] font-bold rounded uppercase tracking-wider">
                       {item.court}
                     </span>
-                    <span className="text-legal-navy/40 text-[10px] md:text-xs">{item.date}</span>
+                    <span className="text-legal-navy/40 text-[9px] md:text-[10px]">{item.date}</span>
                   </div>
-                  <h3 className="text-lg md:text-2xl font-bold group-hover:text-legal-gold transition-colors">{item.subject}</h3>
-                  <p className="text-legal-navy/60 text-xs md:text-sm mt-1">{item.type}</p>
+                  <h3 className="text-sm md:text-base font-bold group-hover:text-legal-gold transition-colors truncate">{item.subject}</h3>
+                  <p className="text-legal-navy/60 text-[10px] md:text-xs mt-0.5">{item.type}</p>
                 </div>
-                <div className="flex-shrink-0 self-end sm:self-center">
-                  <div className="w-10 h-10 md:w-12 md:h-12 rounded-full border border-legal-gold/30 flex items-center justify-center group-hover:bg-legal-gold group-hover:text-white transition-all">
-                    <FileText className="w-4 h-4 md:w-5 md:h-5" />
+                <div className="flex-shrink-0">
+                  <div className="w-8 h-8 md:w-10 md:h-10 rounded-full border border-legal-gold/30 flex items-center justify-center group-hover:bg-legal-gold group-hover:text-white transition-all">
+                    <FileText className="w-3 h-3 md:w-4 md:h-4" />
                   </div>
                 </div>
               </motion.a>
             ))}
           </div>
           
+          {filteredJudgments.length > visibleCount && (
+            <div className="mt-12 text-center">
+              <button 
+                onClick={() => setVisibleCount(prev => prev + 6)}
+                className="px-8 py-3 rounded-full border border-legal-navy text-legal-navy font-bold text-sm hover:bg-legal-navy hover:text-white transition-all"
+              >
+                顯示更多案例
+              </button>
+            </div>
+          )}
+
           <div className="mt-12 md:mt-16 text-center">
             <p className="text-legal-navy/40 text-[10px] md:text-sm italic">
               * 以上僅列出部分公開判決，更多實務經驗歡迎預約諮詢。
